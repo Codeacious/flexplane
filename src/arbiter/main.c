@@ -938,9 +938,6 @@ int main(int argc, char **argv)
 			rte_exit(EXIT_FAILURE, "init_mem failed\n");
 	}
 
-	if (rte_eal_pci_probe() < 0)
-		rte_exit(EXIT_FAILURE, "Cannot probe PCI\n");
-
 	printf("HPET clock runs at %"PRIu64"Hz\n", rte_get_timer_hz());
 
 	ret = conf_setup();
